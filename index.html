@@ -1,0 +1,50 @@
+<html ng-app="userApp">
+
+<head>
+    <title>Our HomePage</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.9/angular.min.js"></script>
+    <script src="user.js"></script>
+</head>
+
+<body>
+    <div ng-controller="UserController as userList">
+
+
+        User Name: <input type="text" ng-model="userList.userName" placeholder="Enter Name"></input> <button
+            ng-click="userList.addUser()">Create</button>
+
+        <br>
+        {{ userName }}
+        <br>
+        <br>
+
+        <div>
+            Name:
+            <span>Bob Testeroni</span><br>
+            <div ng-repeat="user in userList.users">
+                <span>
+                    {{user.name}}
+                </span>
+                <br>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- This is the body, this is where we see content.
+    <br />
+    <br>
+    We got nothing, but the a tag is there
+
+    <a href="http://www.google.com">
+        Updated Google.com
+    </a>
+
+    <img src="img/alice.png">
+
+    </img> -->
+
+</body>
+
+</html>
