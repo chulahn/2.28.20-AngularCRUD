@@ -36,7 +36,7 @@
         <div id="usersList">
             Name:
             <span>Bob Testeroni</span><br>
-            <div ng-repeat="user in userList.users">
+            <div ng-repeat="user in userList.users track by $index">
                 <span>
                     {{ user.name }}
                 </span>
